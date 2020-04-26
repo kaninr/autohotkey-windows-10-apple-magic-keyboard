@@ -63,15 +63,33 @@ F15::SendInput {Pause}
 #t::SendInput ^{t}
 #w::SendInput ^{w}
 
+#d::SendInput ^{d}
+#g::SendInput ^{g}
+#+g::SendInput ^+{g}
+#!k::SendInput ^!{k}
+#[::SendInput ^{[}
+#]::SendInput ^{]}
+#+[::SendInput ^+{[}
+#+]::SendInput ^+{]}
+#!g::SendInput ^!{g}
+#!p::SendInput ^!{p}
+#!b::SendInput ^!{b}
+#!a::SendInput ^!{a}
+
 ; Close windows (cmd + q to Alt + F4)
 #q::Send !{F4}
 
 ; Remap Windows + Tab to Alt + Tab.
-Lwin & Tab::AltTab
+;Lwin & Tab::AltTab
 
 ; minimize windows
 #m::WinMinimize,a
 
+;Prevent Change Language
+CapsLock::SendInput {Return}
+
+;Delete
+#Backspace::SendInput {Delete}
 
 ; --------------------------------------------------------------
 ; OS X keyboard mappings for special chars
@@ -152,3 +170,23 @@ Lwin & Tab::AltTab
 #!u::Send ^u
 
 #IfWinActive
+
+; --------------------------------------------------------------
+; Figma
+; --------------------------------------------------------------
+
+;Copy Properties
+#!c::SendInput ^!{c}
+
+;Paste Properties
+#!v::SendInput ^!{v}
+
+;Zoom In
+#WheelDown::SendInput ^{WheelDown}
+
+;Zoom Out
+#WheelUp::SendInput ^{WheelUp}
+
+WheelDown::SendInput {WheelUp}
+WheelUp::SendInput {WheelDown}
+
