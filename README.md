@@ -9,6 +9,7 @@ This is a very nice tool to have if like me you use an Apple Magic Keyboard and 
 
 # How do I put my hotkeys and hotstrings into effect automatically every time I start my PC?
 https://www.autohotkey.com/docs/FAQ.htm
+
 There are several ways to make a script (or any program) launch automatically every time you start your PC. The easiest is to place a shortcut to the script in the Startup folder:
 
 Find the script file, select it, and press Control+C.
